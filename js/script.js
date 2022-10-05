@@ -14,57 +14,100 @@ https://api.openweathermap.org/data/2.5/weather?q={city name},{country code}&app
 
 let keyAPI = '0dc14b95512a30f4dcf4cd3afc03dd24'
 
-let boton = document.getElementById('button-1')
-boton.addEventListener('click', function () {
-//  console.log(provincia)
-let codigoPostal = document.getElementById('codigo_postal').value
-let provincia = document.getElementById('provincia').value
-let codigoPais = document.getElementById('codigo').value
-
-console.log(provincia)
-console.log(codigoPostal)
-console.log(codigoPais)
-
-  if (codigoPostal == '') {
-    return alert('Faltan datos')
-  } 
-
-
+const defaultApi = () => {
   const getCiudad = async () => {
-    const resultado = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${codigoPostal},${codigoPais}&appid=0dc14b95512a30f4dcf4cd3afc03dd24`)
+    // let codigoPostal = document.getElementById('codigo_postal').value
+    let provincia = document.getElementById('provincia').value
+    let codigoPais = document.getElementById('codigo').value
+    let nombreCiudad = ''
+    // const resultado = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${codigoPostal},${codigoPais}&appid=0dc14b95512a30f4dcf4cd3afc03dd24`)
+    const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${provincia},${codigoPais}&lang=es&appid=${keyAPI}`)
     const response = await resultado.json()
-    // console.log(response)
+    nombreCiudad = response.name;
+    console.log(response)
     return response
   }
-
-  const getTemperaturas = async () => {
-    const ciudad = await getCiudad();
-    const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ciudad.lat}&lon=${ciudad.lon}&lang=es&appid=${keyAPI}`)
-    const response = await resultado.json()
-    // console.log(response)
-    return response
-  }
-
 
   const tarjetas = async () => {
-    const ciudad = await getTemperaturas();
+    const ciudad = await getCiudad();
     console.log(ciudad)
     let tarjeta = document.getElementById('card')
     tarjeta.innerHTML = `
-  <p>Temperatura actual: ${Math.ceil(ciudad.main.temp) / 10}°C</p>
-  <p>Temperatura minima: ${Math.floor(ciudad.main.temp_min / 10)}°C</p>
-  <p>Temperatura max: ${Math.floor(ciudad.main.temp_max / 10)}°C</p>
-  <p>Descripcion : ${ciudad.weather[0].description}
-  <p>Icon : <img src="http://openweathermap.org/img/wn/${ciudad.weather[0].icon}@2x.png" alt=""> </p>
+  <img src="http://openweathermap.org/img/wn/${ciudad.weather[0].icon}@2x.png" alt="">
+  <p>${Math.ceil(ciudad.main.temp) / 10}°C</p>
+  <p class="descripcion_clima">${ciudad.weather[0].description}</p>
+  <p>${ciudad.name}</p>
+  <section class="d-flex justify-content-around">
+  <p>Min: ${Math.floor(ciudad.main.temp_min / 10)}°C</p>
+  <p>Max: ${Math.floor(ciudad.main.temp_max / 10)}°C</p>
+  </section>
   `
-  
+}
+tarjetas()
+}
+defaultApi()
+
+let boton = document.getElementById('button-1')
+boton.addEventListener('click', function () {
+//  console.log(provincia)
+// let codigoPostal = document.getElementById('codigo_postal').value
+let provincia = document.getElementById('provincia').value
+let codigoPais = document.getElementById('codigo').value
+let nombreCiudad = ''
+
+// console.log(provincia)
+// console.log(codigoPostal)
+// console.log(codigoPais)
+
+  // if (codigoPostal == '') {
+  //   return alert('Faltan datos')
+  // } 
+
+
+  const getCiudad = async () => {
+    // const resultado = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${codigoPostal},${codigoPais}&appid=0dc14b95512a30f4dcf4cd3afc03dd24`)
+    const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${provincia},${codigoPais}&lang=es&appid=${keyAPI}`)
+    const response = await resultado.json()
+    nombreCiudad = response.name;
+    // console.log(nombreCiudad)
+    // console.log(response)
+    
+    return response
+  }
+  // getCiudad()
 
   
-  }
-  tarjetas()
+  const tarjetas = async () => {
+    const ciudad = await getCiudad();
+    console.log(ciudad)
+    let tarjeta = document.getElementById('card')
+    tarjeta.innerHTML = `
+  <img src="http://openweathermap.org/img/wn/${ciudad.weather[0].icon}@2x.png" alt="">
+  <p>${Math.ceil(ciudad.main.temp) / 10}°C</p>
+  <p class="descripcion_clima">${ciudad.weather[0].description}</p>
+  <p>${ciudad.name}</p>
+  <section class="d-flex justify-content-around">
+  <p>Min: ${Math.floor(ciudad.main.temp_min / 10)}°C</p>
+  <p>Max: ${Math.floor(ciudad.main.temp_max / 10)}°C</p>
+  </section>
+  `
+}
+
+tarjetas()
 })
 
 
+/*
+const getTemperaturas = async () => {
+  const ciudad = await getCiudad();
+  const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ciudad.lat}&lon=${ciudad.lon}&lang=es&appid=${keyAPI}`)
+  const response = await resultado.json()
+  // console.log(response)
+  // console.log(nombreCiudad)
+
+  return response
+}
+*/
 
 
 
