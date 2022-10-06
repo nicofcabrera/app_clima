@@ -9,10 +9,26 @@ body{
 }
 
 .botonsito{
+  width: 90%;
+}
+
+.seleccion {
+  width: 221px;
+}
+
+footer{
+  position: absolute;
   width: 100%;
+  bottom: 0;
 }
 
 
+@media all and (min-width:768px) {
+  .botonsito{
+    width: 50%;
+    
+  }
+}
 @media all and (min-width:992px) {
   .botonsito{
     width: 20%;
