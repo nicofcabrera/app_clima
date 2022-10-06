@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body{
+  font-family: 'Outfit', sans-serif;
+}
+
+.descripcion_clima{
+  text-transform: uppercase;
+}
+
+.botonsito{
+  width: 100%;
+}
+
+
+@media all and (min-width:992px) {
+  .botonsito{
+    width: 20%;
+    
+  }
+}
