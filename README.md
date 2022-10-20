@@ -4,4 +4,4 @@ Practicando en el consumo de información con API de clima como asi también en 
 
 La api propuesta es de [OpenWeather](https://openweathermap.org/)
 
-Link del deploy: [App Clima](#)
+Link del deploy: **_Proximamente_**
