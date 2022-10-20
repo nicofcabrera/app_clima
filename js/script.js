@@ -24,13 +24,13 @@ const defaultApi = () => {
     const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=tucuman,ar&lang=es&appid=${keyAPI}`)
     const response = await resultado.json()
     nombreCiudad = response.name;
-    console.log(response)
+    // console.log(response)
     return response
   }
 
   const tarjetas = async () => {
     const ciudad = await getCiudad();
-    console.log(ciudad)
+    // console.log(ciudad)
     let tarjeta = document.getElementById('card')
     tarjeta.innerHTML = `
   <img src="http://openweathermap.org/img/wn/${ciudad.weather[0].icon}@2x.png" alt="">
@@ -68,7 +68,7 @@ let codigoPais = document.getElementById('codigo').value
 
   const tarjetas = async () => {
     const ciudad = await getCiudad();
-    console.log(ciudad)
+    // console.log(ciudad)
     let tarjeta = document.getElementById('card')
     tarjeta.innerHTML = `
   <img src="http://openweathermap.org/img/wn/${ciudad.weather[0].icon}@2x.png" alt="">
