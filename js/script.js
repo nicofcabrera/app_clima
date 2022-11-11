@@ -49,7 +49,7 @@ defaultApi()
 
 let boton = document.getElementById('button-1')
 boton.addEventListener('click', function () {
-let provincia = document.getElementById('provincia').value
+// let provincia = document.getElementById('provincia').value
 // let seleccion = document.getElementById('seleccion').value
 // console.log(seleccion)
 let codigoPais = document.getElementById('codigo').value
@@ -58,7 +58,7 @@ let codigoPais = document.getElementById('codigo').value
 
   const getCiudad = async () => {
     // const resultado = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${codigoPostal},${codigoPais}&appid=0dc14b95512a30f4dcf4cd3afc03dd24`)
-    const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${provincia},${codigoPais}&lang=es&appid=${keyAPI}`)
+     const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${codigoPais}&lang=es&appid=${keyAPI}`)
     const response = await resultado.json()
     nombreCiudad = response.name;
     // console.log(nombreCiudad)
@@ -132,3 +132,22 @@ pidiendoDatas()
 //   return personajes.results
 // }
 
+
+const getCiudad1 = async () => {
+    // const resultado = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${codigoPostal},${codigoPais}&appid=0dc14b95512a30f4dcf4cd3afc03dd24`)
+    const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=3835869&lang=es&appid=${keyAPI}`)
+    const response = await resultado.json()
+    // nombreCiudad = response.name;
+  console.log(response)
+    // console.log(nombreCiudad)
+    // console.log(response)  
+    return response
+}
+
+getCiudad1()
+  
+
+
+const probandoId = async () => {
+  
+}

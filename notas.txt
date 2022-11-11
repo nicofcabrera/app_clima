@@ -1,0 +1,47 @@
+# Provincias APPI
+
+Buenos Aires - Buenos Aires - id 3435910
+
+Catamarca - San Fernando del Valle de Catamarca - id 3837702
+
+Chaco - Provincia del Chaco - id 3861887
+
+Chubut - Provincia del Chubut - id 3861244
+
+Córdoba - Cordoba - id 3860259
+
+Corrientes - Corrientes - id 3435217
+
+Entre Ríos - Provincia de Entre Ríos - id 3434137
+
+Formosa - Provincia de Formosa - id 3433896
+
+Jujuy - San Salvador de Jujuy - id 3836564
+
+La Pampa - Provincia de La Pampa - id 3849574
+
+La Rioja - La Rioja - id 3848950
+
+Mendoza - Mendoza - id 3844421
+
+Misiones - Provincia de Misiones - id 3430657
+
+Neuquén - Neuquen - id 3843123
+
+Río Negro - Provincia de Río Negro - id 3838830
+
+Salta - Salta - id 3838233
+
+San Juan - Provincia de San Juan - id 3837152
+
+San Luis - Provincia de San Luis - id 3837029
+
+Santa Cruz - Provincia de Santa Cruz
+
+Santa Fe - Santa Fe Province - id 3836276
+
+Santiago del Estero - Santiago del Estero - id 3835869
+
+Tierra del Fuego - Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur - id 3834450
+
+Tucumán - Listo id -3836873
