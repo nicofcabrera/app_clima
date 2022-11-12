@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
+  <!-- CSS Bootstrap only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
-
   <title>Clima Provincias Argentinas App</title>
 </head>
+
 <body class="bg-dark text-white">
-  <main class="d-md-flex align-items-center justify-content-center">
+  <!-- ###### HEADER ########## -->
+  <header class="text-center p-4">
+    <h1>Consulta el Clima de tu Provincia</h1>
+  </header>
+
+  <!-- ######### MAIN ######### -->
+  <main class="d-flex align-items-center justify-content-center">
     <section class="container">
       <article class="row">
         <article class="col-12">
@@ -22,7 +28,6 @@
       </article>
       <article class="row">
         <article class="col-12 text-center text-white">
-          <!-- <input type="text" class="d-block mx-auto mb-2 " id="provincia" value="" placeholder="Escribi una ciudad"> -->
           <select class="form-select mx-auto seleccion" aria-label="Seleccioná el pais" id="codigo">
             <option value="3435910">Buenos Aires</option>
             <option value="3837702">Catamarca</option>
@@ -48,20 +53,14 @@
             <option value="3834450">Tierra del Fuego</option>
             <option value="3836873">Tucuman</option>
           </select>
-          <p class="form-text mb-3 fst-italic text-hite">Escribi la ciudad a consultar clima</p>
-          <!-- <input type="text" class="d-block mx-auto" id="codigo" value=""> -->
-          <!-- <select class="form-select mx-auto seleccion" aria-label="Seleccioná el pais" id="codigo">
-            <option selected>Seleccioná el pais</option>
-            <option value="ar">Argentina</option>
-            <option value="co">Colombia</option>
-            <option value="br">Brasil</option>
-          </select> -->
-          <!-- <p class="form-text fst-italic texthite">Selecciona el pais de la ciudad</p> -->
+          <p class="form-text mb-3 fst-italic text-white">Escribi la ciudad a consultar clima</p>
           <button class="btn btn-info botonsito" id="button-1">Enviar</button>
         </article>
       </article>
     </section>
   </main>
+
+  <!-- ######### FOOTER ########## -->
   <footer class="text-center">
     <p class="text-white m-0 d-none">&copy Creado por <a href="https://github.com/nicofcabrera" class="text-decoration-none text-info fst-italic " target="_blank">Nicolas Cabrera</a></p>
     <div class="pb-2">
@@ -73,11 +72,6 @@
       </a>
     </div>
   </footer>
-
-
-
-
-
   
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

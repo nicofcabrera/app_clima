@@ -3,10 +3,9 @@
 
 body{
   font-family: 'Outfit', sans-serif;
-  /* min-width: 100vh; */
 }
 main{
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .contenedor{
