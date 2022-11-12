@@ -1,6 +1,6 @@
 /*
 La pagina web debe ser responsive
-Se debe poder buscar cualquier localidad (leer documentación)
+Se debe poder buscar cualquier localidad 
 El proyecto debe estar en github
 Agregar al proyecto a los usuarios: patoogm y cajimenez96
 Cada miembro del grupo, si es los hay, debe tener al menos 1 rama en el proyecto.
@@ -12,11 +12,10 @@ Los grupos no pueden ser mas de 3 personas*/
 ##### Falta probar que se introduzca por nombre
 adjunto este link que seria la forma para obtener el 'name'
 https://api.openweathermap.org/data/2.5/weather?q={city name},{country code}&appid={API key} 
+
 */
 
 let keyAPI = '0dc14b95512a30f4dcf4cd3afc03dd24'
-
-
 
 const defaultApi = () => {
   const getCiudad = async () => {
@@ -138,7 +137,7 @@ const getCiudad1 = async () => {
     const resultado = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=3835869&lang=es&appid=${keyAPI}`)
     const response = await resultado.json()
     // nombreCiudad = response.name;
-  console.log(response)
+  // console.log(response)
     // console.log(nombreCiudad)
     // console.log(response)  
     return response
