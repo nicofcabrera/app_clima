@@ -19,7 +19,7 @@ let codigoProv = document.getElementById('codigo').value
     <p class="fs-4">${Math.ceil(ciudad.main.temp) / 10}°C</p>
     <h3 class="descripcion_clima fs-5">${ciudad.weather[0].description}</h3>
     <h2 class="fs-3">${ciudad.name}</h2>
-    <section class="mb-5 d-flex justify-content-around justify-content-lg-evenly">
+    <section class="mb-4 d-flex justify-content-around justify-content-lg-evenly">
     <p>Min <br> ${Math.floor(ciudad.main.temp_min / 10)}°C</p>
     <p>Max <br> ${Math.floor(ciudad.main.temp_max / 10)}°C</p>
     </section>`
